@@ -30,7 +30,7 @@ func findBadUserRefactored(userList []string, reportList []string, k int) []stri
 			continue
 		}
 
-		// 유효한
+		// 사용자 유효성 체크
 		reporter, reported := a[0], a[1]
 		if !userRepo.IsValidUser(reporter) || !userRepo.IsValidUser(reported) {
 			continue
